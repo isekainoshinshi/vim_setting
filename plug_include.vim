@@ -32,6 +32,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'SirVer/ultisnips'
 	Plug 'vim-scripts/DoxygenToolkit.vim'
 	Plug 'ferrine/md-img-paste.vim'
+	Plug 'skywind3000/asyncrun.vim'
 call plug#end()
 
 "------------------------
@@ -96,15 +97,15 @@ let g:ycm_auto_trigger=1
 let g:ycm_global_ycm_extra_conf='~\my_vim_setting\.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0
 let g:ycm_show_diagnostics_ui=0
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 0
 let g:ycm_complete_in_string=1
 let g:ycm_filetype_blacklist={}
-let g:ycm_filetype_specific_completion_to_disable = {'gitcommit': 1, 'markdown': 1}
-augroup set_completeopt
-	au!
-		let g:ycm_auto_trigger=1
-		au Filetype markdown let g:ycm_auto_trigger=0
-augroup END
+let g:ycm_filetype_specific_completion_to_disable = {'gitcommit': 1}
+"augroup set_completeopt
+"	au!
+"		let g:ycm_auto_trigger=1
+"		au Filetype markdown let g:ycm_auto_trigger=0
+"augroup END
 set completeopt=menu,menuone
 
 "------------------------
@@ -136,8 +137,8 @@ let g:mkdp_filetypes = ['markdown', 'md']
 "ultisnips
 "------------------------
 let g:UltiSnipsExpandTrigger = '<M-space>'
-let g:UltiSnipsJumpForwardTrigger = '<c-n>'
-let g:UltiSnipsJumpBackwardTrigger = '<c-p>'
+let g:UltiSnipsJumpForwardTrigger = '<m-n>'
+let g:UltiSnipsJumpBackwardTrigger = '<m-p>'
 let g:UltiSnipsSnippetDirectories = ["~/my_vim_setting"]
 let g:UltiSnipsEditSplit = "vertical"
 
@@ -174,6 +175,7 @@ let g:DoxygenToolkit_templateTag_pre="@tparam\t"
 let g:AutoPairsFlyMode=1
 let g:AutoPairsShortcutBackInsert=''
 let g:AutoPairsShortcutFastWrap=''
+let g:AutoPairsShortcutToggle=''
 
 "-----------------------
 " md-img-paste 
@@ -182,3 +184,9 @@ autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownCli
 let g:mdip_imgdir = 'pic'
 let g:mdip_imgname = 'pic'
 let g:mdip_imgdir_intext = 'pic'
+
+"-----------------------
+" asyncrun
+" ----------------------
+let g:asyncrun_open=6
+let g:asyncrun_encs='gbk'

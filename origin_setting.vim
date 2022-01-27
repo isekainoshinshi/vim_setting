@@ -5,7 +5,7 @@
 	set guioptions-=m
 	set guioptions-=T
 	"set guifont=SimHei:h14
-	set guifont=Lucida_Console:h14:cANSI:qDRAFT
+	set guifont=Lucida_Console:h12:cANSI:qDRAFT
 	set langmenu=en_US
 	let $LANG= 'en_US'
 	set termencoding=utf-8 
