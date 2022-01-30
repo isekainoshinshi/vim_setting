@@ -140,7 +140,7 @@ snippet ^ "upper" Ai
 endsnippet
 
 context "math()"
-snippet ooo "\infty" i
+snippet oo "\infty" i
 \infty
 endsnippet
 
@@ -165,42 +165,32 @@ snippet >= "geq"
 endsnippet
 
 context "math()"
-snippet EE "geq" 
-\exists 
-endsnippet
-
-context "math()"
-snippet AA "forall" i
-\forall 
-endsnippet
-
-context "math()"
-snippet xnn "xn" 
+snippet xnn "xn"	i
 x_{n}
 endsnippet
 
 context "math()"
-snippet ynn "yn" 
+snippet ynn "yn"	i
 y_{n}
 endsnippet
 
 context "math()"
-snippet xii "xi" 
+snippet xii "xi"	i
 x_{i}
 endsnippet
 
 context "math()"
-snippet yii "yi" 
+snippet yii "yi"	i
 y_{i}
 endsnippet
 
 context "math()"
-snippet xjj "xj" 
+snippet xjj "xj"	i
 x_{j}
 endsnippet
 
 context "math()"
-snippet yjj "yj" 
+snippet yjj "yj"	i
 y_{j}
 endsnippet
 
@@ -210,7 +200,7 @@ x_{n+1}
 endsnippet
 
 context "math()"
-snippet xmm "x" 
+snippet xmm "x"	i
 x_{m}
 endsnippet
 
@@ -331,7 +321,7 @@ endsnippet
 
 context "math()"
 snippet || "mid" 
- \mid 
+\mid 
 endsnippet
 
 context "math()"
@@ -374,23 +364,33 @@ snippet nnn "bigcap"
 endsnippet
 
 context "math()"
-snippet OO "emptyset" 
-\O
+snippet emp "emptyset" 
+\emptyset 
+endsnippet
+
+context "math()"
+snippet all "forall" i
+\forall 
+endsnippet
+
+context "math()"
+snippet exi "exists" i
+\exists 
 endsnippet
 
 context "math()"
 snippet RR "real" i
-\R
+\R 
 endsnippet
 
 context "math()"
-snippet QQ "Q" 
-\Q
+snippet EE "expect" 
+\mathbb{E}
 endsnippet
 
 context "math()"
 snippet ZZ "Z" 
-\Z
+\Z 
 endsnippet
 
 context "math()"
@@ -505,7 +505,7 @@ endsnippet
 
 context "math()"
 snippet sum "sum" w
-\sum_{n=${1:1}}^{${2:\infty}} ${3:a_n z^n}
+\sum_{${1:n=${2:1}}}^{${3:\infty}} ${4:${VISUAL}} $0
 endsnippet
 
 context "math()"
