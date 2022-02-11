@@ -94,7 +94,7 @@ let g:ale_cpp_clang_options = '-Wall -std=c++14'
 "default setting"
 let g:ycm_add_preview_to_completeopt=0
 let g:ycm_auto_trigger=1
-let g:ycm_global_ycm_extra_conf='~\my_vim_setting\.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf='~/vim_setting/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0
 let g:ycm_show_diagnostics_ui=0
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
@@ -136,10 +136,10 @@ let g:mkdp_filetypes = ['markdown', 'md']
 "------------------------
 "ultisnips
 "------------------------
-let g:UltiSnipsExpandTrigger = '<M-space>'
-let g:UltiSnipsJumpForwardTrigger = '<m-n>'
-let g:UltiSnipsJumpBackwardTrigger = '<m-p>'
-let g:UltiSnipsSnippetDirectories = ["~/my_vim_setting"]
+let g:UltiSnipsExpandTrigger = '<M-c>'
+let g:UltiSnipsJumpForwardTrigger = '<M-n>'
+let g:UltiSnipsJumpBackwardTrigger = '<M-p>'
+let g:UltiSnipsSnippetDirectories = ["~/vim_setting"]
 let g:UltiSnipsEditSplit = "vertical"
 
 "-----------------------

@@ -1,7 +1,6 @@
 "------------------
 "keymap
 "-----------------
-
 "-----------------
 "switch windows
 "----------------
@@ -27,6 +26,7 @@ map! <M-e> <c-o>e<Right>
 "----------------
 "quick new line
 "----------------
-imap <c-CR> <c-o>o
-imap <M-CR> <c-o>A;<CR>
+imap <M-O> <c-o>O
+imap <M-o> <c-o>o
+imap <M-;> <c-o>A;<CR>
 
