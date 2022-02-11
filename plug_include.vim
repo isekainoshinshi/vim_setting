@@ -100,12 +100,12 @@ let g:ycm_show_diagnostics_ui=0
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
 let g:ycm_complete_in_string=1
 let g:ycm_filetype_blacklist={'markdown': 1}
-let g:ycm_filetype_specific_completion_to_disable = {'gitcommit': 1}
-"augroup set_completeopt
-"	au!
-"		let g:ycm_auto_trigger=1
-"		au Filetype markdown let g:ycm_auto_trigger=0
-"augroup END
+let g:ycm_filetype_specific_completion_to_disable = {'gitcommit': 1, 'markdown': 1}
+augroup set_completeopt
+	au!
+		let g:ycm_auto_trigger=1
+		au Filetype markdown let g:ycm_auto_trigger=0
+augroup END
 set completeopt=menu,menuone
 
 "------------------------
