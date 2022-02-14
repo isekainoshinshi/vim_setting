@@ -77,6 +77,16 @@ snippet // "Fraction" iA
 \\frac{$1}{$2}$0
 endsnippet
 
+context "math()"
+snippet par "Partial" i
+\partial $0
+endsnippet
+
+context "math()"
+snippet parf "Fraction Partial" i
+\\frac{\partial $1}{\partial $2} $0
+endsnippet
+
 # context "math()"
 # snippet / "Fraction" iA
 # \\frac{${VISUAL}}{$1}$0
@@ -384,7 +394,7 @@ snippet RR "real" i
 endsnippet
 
 context "math()"
-snippet EE "expect" 
+snippet EE "expect" i
 \mathbb{E}
 endsnippet
 
@@ -551,11 +561,6 @@ endsnippet
 context "math()"
 snippet ~~ "approx"
 \approx
-endsnippet
-
-context "math()"
-snippet != "nq" 
-\neq
 endsnippet
 
 context "math()"

@@ -3,36 +3,70 @@
 "included plug
 "----------------------
 call plug#begin('~/.vim/plugged')
-	Plug 'lifepillar/vim-cheat40'
-	Plug 'octol/vim-cpp-enhanced-highlight'	
 	"Plug 'sheerun/vim-polyglot'
-	Plug 'sainnhe/sonokai'
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
-	Plug 'tpope/vim-unimpaired'
 	Plug 'ludovicchabant/vim-gutentags'
-	"Plug 'skywind3000/gutentags_plus'
-	"Plug 'nvim-treesitter/nvim-treesitter'
-	Plug 'jiangmiao/auto-pairs'
+	"Plug 'jiangmiao/auto-pairs'
+	Plug 'tpope/vim-unimpaired'
 	Plug 'dense-analysis/ale'
 	Plug 'tpope/vim-surround'
 	"Plug 'tpope/vim-commentary'
-	Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-	Plug 'ycm-core/YouCompleteMe', {'d': 'python install.py --clang-completer --system-libclang'}
 	"Plug 'Yggdroot/LeaderF'
-	Plug 'Shougo/echodoc.vim'
 	"Plug 'lervag/vimtex' 
 	Plug 'godlygeek/tabular'
+	Plug 'SirVer/ultisnips'
+	Plug 'vim-scripts/DoxygenToolkit.vim'
+	Plug 'skywind3000/asyncrun.vim'
+
+	"------------
+	"quick movement
+	"------------
+	Plug 'easymotion/vim-easymotion'
+	Plug 'justinmk/vim-sneak'
+
+	"------------
+	"Color scheme
+	"------------
+	"Plug 'sainnhe/sonokai'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'sonph/onehalf', {'rtp': 'vim/'}
+
+	"------------
+	"Tutorial
+	"------------
+	Plug 'lifepillar/vim-cheat40'
+
+	"------------
+	"cxx plug
+	"------------
+	Plug 'octol/vim-cpp-enhanced-highlight'	
+	Plug 'Shougo/echodoc.vim'
+
+	"------------
+	"cmake
+	"------------
+	Plug 'pboettch/vim-cmake-syntax', { 'for': ['cmake'] }
+
+	"------------
+	"python
+	"------------
+	Plug 'vim-python/python-syntax', { 'for': ['python'] }
+
+	"------------
+	"completer
+	"------------
+	Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+	Plug 'ycm-core/YouCompleteMe', {'d': 'python install.py --clang-completer --system-libclang'}
+
+	"------------
+	"mardown
+	"------------
 	Plug 'plasticboy/vim-markdown'
 	Plug 'mzlogin/vim-markdown-toc'
 	Plug 'iamcco/mathjax-support-for-mkdp'
-	"Plug 'iamcco/markdown-preview.vim'
 	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-	"Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
-	Plug 'SirVer/ultisnips'
-	Plug 'vim-scripts/DoxygenToolkit.vim'
 	Plug 'ferrine/md-img-paste.vim'
-	Plug 'skywind3000/asyncrun.vim'
+
 call plug#end()
 
 "------------------------
@@ -42,14 +76,20 @@ call plug#end()
 "-----------------------
 "color theme
 "----------------------
-if has('termguicolors')
-  set termguicolors
-endif
-let g:sonokai_style = 'shusia'
-let g:sonokai_enable_italic = 0
-let g:sonokai_disable_italic_comment = 0
-let g:airline_theme = 'sonokai'
-colorscheme sonokai
+"if has('termguicolors')
+"  set termguicolors
+"endif
+"let g:sonokai_style = 'shusia'
+"let g:sonokai_enable_italic = 0
+"let g:sonokai_disable_italic_comment = 0
+"let g:airline_theme = 'sonokai'
+"colorscheme sonokai
+
+"-----------------------
+"onehalf
+"----------------------
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
 
 "-----------------------
 "vim-cpp-enhanced-highlight
