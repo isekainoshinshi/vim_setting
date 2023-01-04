@@ -88,7 +88,7 @@ call plug#end()
 "-----------------------
 "onehalf
 "----------------------
-colorscheme onehalfdark
+"colorscheme onehalfdark
 let g:airline_theme='onehalfdark'
 
 "-----------------------
@@ -132,26 +132,31 @@ let g:ale_cpp_clang_options = '-Wall -std=c++14'
 "-------------------------
 "let g:ycm_global_ycm_extra_conf='~\.vim\plugged\YouCompleteMe\third_party\ycmd\.ycm_extra_conf.py'
 "default setting"
-let g:ycm_add_preview_to_completeopt=0
 let g:ycm_auto_trigger=1
+let g:ycm_add_preview_to_completeopt=0
 let g:ycm_global_ycm_extra_conf='~/vim_setting/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0
 let g:ycm_show_diagnostics_ui=0
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
 let g:ycm_complete_in_string=1
-let g:ycm_filetype_blacklist={'markdown': 1}
-let g:ycm_filetype_specific_completion_to_disable = {'gitcommit': 1, 'markdown': 1}
-augroup set_completeopt
-	au!
-		let g:ycm_auto_trigger=1
-		au Filetype markdown let g:ycm_auto_trigger=0
-augroup END
-set completeopt=menu,menuone
+"let g:ycm_filetype_blacklist={
+"			\ 'markdown': 1
+"			\}
+"let g:ycm_filetype_specific_completion_to_disable = {
+"			\ 'gitcommit': 1,
+"			\ 'markdown': 1
+"			\}
+"augroup set_completeopt
+"	au!
+"		let g:ycm_auto_trigger=1
+"		au Filetype markdown let g:ycm_auto_trigger=0
+"augroup END
 
 "------------------------
 "echodoc
 "-----------------------
 let g:echodoc#enable_at_startup = 1
+let g:echodoc#type="echo"
 
 "-------------------------
 "vim-markdown
@@ -220,7 +225,6 @@ let g:AutoPairsShortcutToggle=''
 "-----------------------
 " md-img-paste 
 " ----------------------
-autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 let g:mdip_imgdir = 'pic'
 let g:mdip_imgname = 'pic'
 let g:mdip_imgdir_intext = 'pic'

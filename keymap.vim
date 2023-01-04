@@ -30,3 +30,7 @@ imap <M-O> <c-o>O
 imap <M-o> <c-o>o
 imap <M-;> <c-o>A;<CR>
 
+
+nmap <leader>d <plug>(YCMHover)
+autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
+
